@@ -1,13 +1,37 @@
 .jumbotron {
 
-    background-image: url("/bg.jpg");
+    background-image: url("img/bg.jpg");
     background-size: auto;
 }
 
-.background-div {
-    background-image: url('~/img/bg.jpg'); /* Arka plan resmi dosya yolunu burada belirtin */
-    background-size: auto; /* Resmin div'i kaplamasını sağlar */
-    
+.card-title{
+    font-size: 16px;
+    font-weight: 400;
+    color: #9c33ff;
+    line-height: 1.35em;
+    height: 34px;
+}
+
+.description{
+    font-size: 12px;
+    height: 40px;
+}
+
+.price{
+    color: #a52834;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.buton{
+   font-weight: bold;
+    color: #a52834;
+}
+
+
+#product_details h1{
+    font-size: 18px;
+    font-weight: 700;
 }
 
 
