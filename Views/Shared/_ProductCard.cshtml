@@ -1,0 +1,32 @@
+@model IEnumerable<ProductModel> 
+
+<div class="row">
+
+    @foreach (var product in Model)
+    {
+        <div class="col md-4">
+            <div class="card mb-4" style="width: 250px">
+                <img class="card-img-top" src="/img/@product.Image" alt="@product.Name">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/Home/Details/@product.ProductId">
+                            @product.Name
+                        </a>
+                    </h4>
+                    <p class="card-text pt-2 description">@product.Description</p>
+                    <p class="product-price">
+                        <i class="fa fa-try" aria-hidden="true"></i>
+                        <small class="price">@product.Price</small>
+
+                        <a href="/Home/Details/@product.ProductId" class="btn btn-close btn-sm buton float-right">
+                            Ürünü İncele
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
