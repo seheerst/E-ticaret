@@ -1,0 +1,26 @@
+@model Category
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>
+    <b> Kategori Oluştur</b>
+</h2>
+<hr/>
+<form asp-controller="Category" asp-action="Create" method="post">
+    <div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"> Category Name</label>
+        <input asp-for="Name" class="form-control border-input"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"> Category Description</label>
+        <input asp-for="Description" class="form-control border-input"/>
+    </div>
+    
+    <button class="btn btn-outline-warning" type="submit"> Create</button>
+</div>
+</form>
+

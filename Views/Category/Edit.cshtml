@@ -1,0 +1,29 @@
+@model Category
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container pb-5">
+
+    <h2>Kategori Güncelle</h2>
+    <hr/>
+
+<div class="col-7">
+    <form asp-controller="Category" asp-action="Edit" method="post">
+        <input type="hidden" asp-for="CategoryId"/>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"> Category Name</label>
+            <input asp-for="Name" class="form-control border-input"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label"> Course Description</label>
+            <input asp-for="Description" class="form-control border-input"/>
+        </div>
+        
+        <button class="btn btn-outline-warning" type="submit"> Güncelle</button>
+
+    </form>
+</div>
+</div>
