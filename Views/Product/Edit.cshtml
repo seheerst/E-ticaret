@@ -1,0 +1,60 @@
+@model Product
+
+@{
+    ViewBag.Title = "Güncelle";
+    Layout = "_AdminLayout";
+}
+
+<div class="container pb-5 mt-5">
+
+    <h2>Ürünü Güncelle</h2>
+    <hr/>
+
+
+    <form asp-controller="Product" asp-action="Edit" method="post">
+        <input type="hidden" asp-for="ProductId"/>
+        <h4>Product</h4>
+        <hr/>
+        <div class="">
+            <label asp-for="Name" class="form-label"> Name</label>
+            <input class="form-control" asp-for="Name"/>
+        </div>
+        <div class="">
+            <label asp-for="Description" class="form-label"> Description</label>
+            <input class="form-control" asp-for="Description"/>
+        </div>
+        <div class="">
+            <label asp-for="Price" class="form-label"> Price</label>
+            <input class="form-control" asp-for="Price"/>
+        </div>
+
+        <div class="">
+            <label asp-for="Image" class="form-label"> Image</label>
+            <input class="form-control" asp-for="Image"/>
+        </div>
+        <div class="">
+            <label asp-for="Stock" class="form-label"> Stock</label>
+            <input class="form-control" asp-for="Stock"/>
+        </div>
+
+        <div class="" style="display: inline">
+            <label asp-for="IsHome" class="form-label"> IsHome</label>
+            <input asp-for="IsHome" class="form-check"/>
+        </div>
+
+        <div class="">
+            <label asp-for="IsApproved" class="form-label"> IsProved</label>
+            <input asp-for="IsApproved" class="form-check"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category" class="form-label">Category</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
+                <option value=""> Select</option>
+            </select>
+        </div>
+        <button class="btn btn-outline-warning" type="submit"> Güncelle</button>
+    </form>
+
+</div>
+
+
